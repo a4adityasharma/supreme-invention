@@ -1,3 +1,38 @@
+# YouTube Sentiment Analyzer (Simple Demo)
+
+This small demo analyzes text (YouTube URLs or titles) with a simple sentiment API backed by VADER and Flask. It is intentionally minimal and meant for local experimentation.
+
+Features:
+- Frontend: plain HTML/CSS/JS (modernized theme)
+- Backend: Flask + VADER sentiment (via `vaderSentiment`)
+
+Quick start:
+
+1. Create a Python virtual environment and activate it
+
+```bash
+python -m venv .venv
+source .venv/Scripts/activate   # Windows: .venv\Scripts\activate
+```
+
+2. Install dependencies
+
+```bash
+pip install -r requirements.txt
+python -m vaderSentiment.vader_lexicon
+```
+
+3. Run the app
+
+```bash
+python app.py
+```
+
+4. Open http://127.0.0.1:5000
+
+Notes:
+- This demo uses a static CSV (if present) for bulk-analysis endpoint. Live extraction of YouTube comments is out of scope for the demo.
+- If you want help adding features (YouTube scraping, OAuth, persisted storage), ask and I can extend it.
 📺 YouTube Video Sentiment Analyzer
 
 

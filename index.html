@@ -1,40 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YouTube Sentiment Analyzer</title>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <header>
-    <h1>YouTube Video Sentiment Analyzer</h1>
-    <p>Paste a YouTube video URL or video title, then analyze sentiment.</p>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Sentiment Analyzer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p6O4XvM9fQeDkFQx0KqJYf2bS1G2x0eP5QwS1VdQ+Vv0K3pQ1JY1h2mQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <div class="logo">YouTube Sentiment</div>
+        <nav class="nav">
+          <a href="#">Home</a>
+          <a href="#examples">Examples</a>
+          <a href="#">Docs</a>
+        </nav>
+      </header>
 
-  <main>
-    <form id="sentiment-form">
-      <label for="video-input">YouTube URL or Video Title</label>
-      <input id="video-input" type="text" placeholder="Enter YouTube URL or title" required />
-      <button type="submit">Analyze Sentiment</button>
-    </form>
+      <section class="hero">
+        <div class="hero-card">
+          <h1>Analyze YouTube Comments Sentiment</h1>
+          <p>Quickly evaluate a video's audience reception using simple sentiment analysis — paste a URL or type a video title to get started.</p>
 
-    <section id="result" class="hidden">
-      <h2>Analysis Result</h2>
-      <div id="sentiment-output"></div>
-      <div id="score-output"></div>
-    </section>
+          <form id="sentiment-form">
+            <input id="video-input" type="text" placeholder="YouTube URL or video title" required />
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i>&nbsp;Analyze</button>
+          </form>
 
-    <section class="examples">
-      <h2>Example Use</h2>
-      <ul>
-        <li>https://www.youtube.com/watch?v=dQw4w9WgXcQ</li>
-        <li>Funny cat compilation</li>
-        <li>Product review video</li>
-      </ul>
-    </section>
-  </main>
+          <div class="examples" id="examples">
+            <h4>Example queries</h4>
+            <ul>
+              <li>https://www.youtube.com/watch?v=dQw4w9WgXcQ</li>
+              <li>Product review: wireless earbuds</li>
+              <li>Funny cat compilation</li>
+            </ul>
+          </div>
+        </div>
 
-  <script src="js/app.js"></script>
-</body>
+        <div class="hero-card">
+          <div class="card">
+            <h2>Analysis Result</h2>
+            <div id="result" class="result">
+              <div class="card">
+                <div class="sentiment" id="sentiment-output">No analysis yet</div>
+                <div class="score" id="score-output">Enter a query to analyze.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        Built with <span style="color:var(--accent)">VADER</span> &amp; Flask — simple demo UI
+      </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
 </html>
