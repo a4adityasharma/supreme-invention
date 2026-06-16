@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Sentiment Analyzer</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>YouTube Video Sentiment Analyzer</h1>
+    <p>Paste a YouTube video URL or video title, then analyze sentiment.</p>
+  </header>
+
+  <main>
+    <form id="sentiment-form">
+      <label for="video-input">YouTube URL or Video Title</label>
+      <input id="video-input" type="text" placeholder="Enter YouTube URL or title" required />
+      <button type="submit">Analyze Sentiment</button>
+    </form>
+
+    <section id="result" class="hidden">
+      <h2>Analysis Result</h2>
+      <div id="sentiment-output"></div>
+      <div id="score-output"></div>
+    </section>
+
+    <section class="examples">
+      <h2>Example Use</h2>
+      <ul>
+        <li>https://www.youtube.com/watch?v=dQw4w9WgXcQ</li>
+        <li>Funny cat compilation</li>
+        <li>Product review video</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

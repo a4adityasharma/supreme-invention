@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #222;
+}
+
+header {
+  background: #2d3e50;
+  color: #fff;
+  padding: 36px 24px;
+  text-align: center;
+}
+
+main {
+  max-width: 720px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+form {
+  display: grid;
+  gap: 12px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+label {
+  font-weight: 600;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #ccd6dd;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 14px 20px;
+  border: none;
+  background: #4a90e2;
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #357ab8;
+}
+
+.hidden {
+  display: none;
+}
+
+#result {
+  margin-top: 24px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+#sentiment-output {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+#score-output {
+  color: #555;
+}
+
+.examples {
+  margin-top: 24px;
+}
+
+.examples ul {
+  padding-left: 20px;
+}
+
+.examples li {
+  margin-bottom: 8px;
+}
